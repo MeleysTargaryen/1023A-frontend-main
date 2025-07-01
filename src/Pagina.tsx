@@ -36,7 +36,12 @@ function Pagina() {
     }, [])// [] => significa as dependências do useEffects
     async function TrataCadastro(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
+
+        
         //Criar um novo produto
+        // Alt + Shift + F para formatar o código
+
+
         const novoProduto: ProdutosState = {
             id: parseInt(id),
             nome: nome,
