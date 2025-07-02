@@ -1,0 +1,143 @@
+:root {
+  --cor-verde-escuro: #2e5339;
+  --cor-verde-claro: #a8cbb7;
+  --cor-areia: #fef9f2;
+  --cor-marrom-claro: #d2b48c;
+  --cor-branco: #ffffff;
+  --fonte-site: 'Georgia', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-site);
+  background-color: var(--cor-areia);
+  color: var(--cor-verde-escuro);
+}
+
+.cabecalho {
+  background-color: var(--cor-areia);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 2px solid var(--cor-verde-escuro);
+  z-index: 10;
+  font-family: 'Playfair Display', serif;;
+}
+
+.logotipo {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--cor-verde-escuro);
+  letter-spacing: 2px;
+}
+
+.navegacao ul {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.navegacao a {
+  text-decoration: none;
+  color: var(--cor-verde-escuro);
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navegacao a:hover {
+  color: var(--cor-marrom-claro);
+  border-bottom: 2px solid var(--cor-marrom-claro);
+}
+
+.secao-banner {
+  display: flex;
+  height: calc(100vh - 80px);
+  background-color: var(--cor-verde-claro);
+  padding: 60px;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.conteudo-banner {
+  flex: 1;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.conteudo-banner h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--cor-verde-escuro);
+}
+
+.conteudo-banner p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.botao {
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-branco);
+  padding: 14px 32px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #1e3f2b;
+}
+
+.imagem-banner {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.imagem-banner img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-branco);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .secao-banner {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .imagem-banner img {
+    max-width: 300px;
+    margin-top: 20px;
+  }
+}
