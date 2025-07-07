@@ -8,110 +8,160 @@
   --fonte-corpo: 'Georgia', serif;
 }
 
-/* Container geral da página */
-.produtos-container {
+
+.menu-topo {
+  background: var(--cor-branco);
+  border-bottom: 1px solid #ddd;
+  padding: 12px 24px;
   display: flex;
-  min-height: 100vh;
-  background-color: var(--cor-areia);
-  font-family: var(--fonte-corpo);
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Menu lateral sofisticado */
-.menu-lateral {
-  width: 260px;
-  background-color: var(--cor-verde-escuro);
-  color: var(--cor-branco);
-  padding: 30px 20px;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+.menu-topo ul {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.menu-lateral h2 {
-  font-family: var(--fonte-titulo);
-  font-size: 24px;
-  margin-bottom: 25px;
-  border-bottom: 2px solid var(--cor-marrom-claro);
-  padding-bottom: 10px;
-  color: var(--cor-branco);
-}
-
-.menu-lateral ul {
+  gap: 24px;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-.menu-lateral li {
-  margin: 18px 0;
-}
-
-.menu-lateral a {
-  color: var(--cor-areia);
+.menu-topo a {
   text-decoration: none;
+  color: #222;
   font-weight: 600;
   font-size: 16px;
+  padding-bottom: 4px;
   transition: color 0.3s, border-bottom 0.3s;
 }
 
-.menu-lateral a:hover {
-  color: var(--cor-marrom-claro);
-  border-bottom: 2px solid var(--cor-marrom-claro);
+.menu-topo a:hover {
+  color: var(--cor-verde-escuro);
+  border-bottom: 2px solid var(--cor-verde-escuro);
 }
 
-/* Conteúdo principal com estilo elegante */
+
 .conteudo-principal {
-  flex-grow: 1;
-  padding: 50px 60px;
-  background-color: var(--cor-branco);
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
-  border-left: 1px solid var(--cor-verde-claro);
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 30px 20px;
+  background: var(--cor-branco);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .conteudo-principal h1 {
   font-family: var(--fonte-titulo);
   font-size: 36px;
   color: var(--cor-verde-escuro);
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  text-align: center;
   border-bottom: 2px solid var(--cor-verde-claro);
   padding-bottom: 10px;
 }
 
-.conteudo-principal p {
-  color: #555;
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 800px;
+.numero-produtos {
+  color: #777;
+  font-size: 15px;
+  text-align: right;
+  margin-bottom: 20px;
 }
 
-/* Responsividade */
+
+.grid-produtos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--cor-areia);
+}
+
+
+.card-produto {
+  background: var(--cor-branco);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-produto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.card-produto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  background-color: #ccc;
+}
+
+.card-produto .info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-produto .info h2 {
+  font-size: 18px;
+  color: var(--cor-verde-escuro);
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-produto .descricao {
+  font-size: 14px;
+  color: #777;
+}
+
+.card-produto .preco {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--cor-marrom-claro);
+  margin-top: 8px;
+}
+
+
 @media (max-width: 768px) {
-  .produtos-container {
+  .menu-topo {
     flex-direction: column;
+    gap: 15px;
+    padding: 15px;
   }
 
-  .menu-lateral {
-    width: 100%;
-    flex-direction: row;
-    overflow-x: auto;
-    padding: 20px;
-  }
-
-  .menu-lateral h2 {
-    display: none;
-  }
-
-  .menu-lateral ul {
-    display: flex;
-    gap: 24px;
+  .menu-topo ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
   }
 
   .conteudo-principal {
-    padding: 30px 20px;
+    padding: 20px;
+    margin: 15px auto;
   }
 
   .conteudo-principal h1 {
     font-size: 28px;
+  }
+
+  .grid-produtos {
+    gap: 16px;
+    padding: 15px;
+  }
+
+  .card-produto {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .card-produto img {
+    height: 180px;
   }
 }

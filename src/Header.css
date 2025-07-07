@@ -3,7 +3,7 @@
 :root {
   --cor-verde-escuro: #2e5339;
   --cor-verde-claro: #a8cbb7;
-  --cor-areia: #fef9f2;
+  --cor-areia: #d2b48c;
   --cor-marrom-claro: #d2b48c;
   --cor-branco: #ffffff;
   --fonte-titulo: 'Playfair Display', serif;
@@ -29,7 +29,7 @@ header, nav, ul, li {
   z-index: 10;
 }
 
-/* Logo */
+
 .logotipo {
   font-size: 32px;
   font-weight: bold;
@@ -37,7 +37,7 @@ header, nav, ul, li {
   letter-spacing: 2px;
 }
 
-/* Navegação */
+
 .navegacao ul {
   display: flex;
   list-style: none;
