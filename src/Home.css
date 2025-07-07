@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
 :root {
   --cor-verde-escuro: #2e5339;
   --cor-verde-claro: #a8cbb7;
   --cor-areia: #fef9f2;
   --cor-marrom-claro: #d2b48c;
   --cor-branco: #ffffff;
-  --fonte-site: 'Georgia', serif;
+  --fonte-titulo: 'Playfair Display', serif;
+  --fonte-corpo: 'Georgia', serif;
 }
 
 * {
@@ -14,48 +17,12 @@
 }
 
 body {
-  font-family: var(--fonte-site);
+  font-family: var(--fonte-corpo);
   background-color: var(--cor-areia);
   color: var(--cor-verde-escuro);
 }
 
-.cabecalho {
-  background-color: var(--cor-areia);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  border-bottom: 2px solid var(--cor-verde-escuro);
-  z-index: 10;
-  font-family: 'Playfair Display', serif;;
-}
-
-.logotipo {
-  font-size: 32px;
-  font-weight: bold;
-  color: var(--cor-verde-escuro);
-  letter-spacing: 2px;
-}
-
-.navegacao ul {
-  display: flex;
-  list-style: none;
-  gap: 32px;
-}
-
-.navegacao a {
-  text-decoration: none;
-  color: var(--cor-verde-escuro);
-  font-weight: 600;
-  font-size: 16px;
-  transition: color 0.3s;
-}
-
-.navegacao a:hover {
-  color: var(--cor-marrom-claro);
-  border-bottom: 2px solid var(--cor-marrom-claro);
-}
-
+/* SEÇÃO DO BANNER DA HOME */
 .secao-banner {
   display: flex;
   height: calc(100vh - 80px);
@@ -64,9 +31,35 @@ body {
   gap: 40px;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
 }
 
+.secao-banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.sobreposicao-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 83, 57, 0.3);
+  z-index: 2;
+}
+
+/* Conteúdo por cima da imagem */
 .conteudo-banner {
+  position: relative;
+  z-index: 3;
   flex: 1;
   max-width: 600px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -79,6 +72,7 @@ body {
   font-size: 40px;
   margin-bottom: 20px;
   color: var(--cor-verde-escuro);
+  font-family: var(--fonte-titulo);
 }
 
 .conteudo-banner p {
@@ -88,6 +82,7 @@ body {
   line-height: 1.5;
 }
 
+/* Botão de CTA */
 .botao {
   background-color: var(--cor-verde-escuro);
   color: var(--cor-branco);
@@ -103,24 +98,7 @@ body {
   background-color: #1e3f2b;
 }
 
-.imagem-banner {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-   width: 100%;
-  max-width: 500px;
-  border-radius: 16px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-}
-
-.imagem-banner img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 16px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-}
-
+/* Footer ainda pode ficar aqui, se existir em Home */
 footer {
   text-align: center;
   padding: 20px;
@@ -129,6 +107,7 @@ footer {
   font-size: 14px;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
   .secao-banner {
     flex-direction: column;
@@ -136,8 +115,7 @@ footer {
     text-align: center;
   }
 
-  .imagem-banner img {
-    max-width: 300px;
-    margin-top: 20px;
+  .conteudo-banner {
+    padding: 30px 20px;
   }
 }
