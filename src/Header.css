@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+  --cor-verde-escuro: #2e5339;
+  --cor-verde-claro: #a8cbb7;
+  --cor-areia: #fef9f2;
+  --cor-marrom-claro: #d2b48c;
+  --cor-branco: #ffffff;
+  --fonte-titulo: 'Playfair Display', serif;
+  --fonte-corpo: 'Georgia', serif;
+}
+
+
+header, nav, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cabecalho {
+  background-color: var(--cor-areia);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 2px solid var(--cor-verde-escuro);
+  font-family: var(--fonte-titulo);
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo */
+.logotipo {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--cor-verde-escuro);
+  letter-spacing: 2px;
+}
+
+/* Navegação */
+.navegacao ul {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.navegacao a {
+  text-decoration: none;
+  color: var(--cor-verde-escuro);
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navegacao a:hover {
+  color: var(--cor-marrom-claro);
+  border-bottom: 2px solid var(--cor-marrom-claro);
+}
+
+
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 30px;
+  }
+
+  .navegacao ul {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+  }
+}
