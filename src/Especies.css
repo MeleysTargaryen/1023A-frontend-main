@@ -1,0 +1,47 @@
+.pagina-especies {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  font-family: var(--fonte-corpo);
+}
+
+.conteudo-principal {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 32px;
+  color: var(--cor-verde-escuro);
+  border-bottom: 2px solid var(--cor-verde-escuro);
+  padding-bottom: 8px;
+  font-family: var(--fonte-titulo);
+}
+
+.secao-especie {
+  background-color: var(--cor-branco);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.secao-especie:hover {
+  transform: translateY(-4px);
+}
+
+.secao-especie h2 {
+  font-size: 24px;
+  color: var(--cor-verde-escuro);
+  margin-bottom: 12px;
+  font-family: var(--fonte-titulo);
+}
+
+.secao-especie p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
