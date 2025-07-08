@@ -5,7 +5,8 @@ import Home from './Home.tsx';
 import Especies from './Especies.tsx';
 import Produtos from './Produtos.tsx';
 import AnimaisResgatados from './AnimaisResgatados.tsx';
-import Login from './Login.tsx';
+import Adm from './Adm.tsx';
+
 
 
 
@@ -17,7 +18,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/especies" element={<Especies />} />
         <Route path="/produtos" element={<Produtos />} />
         <Route path="/animaisresgatados" element={<AnimaisResgatados />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/adm" element={<Adm />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

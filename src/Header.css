@@ -47,8 +47,12 @@ li {
   font-family: var(--fonte-titulo);
   transition: color 0.3s;
 }
-
-
+.logo-imagem {
+  height: 60px;
+  width: auto;
+  margin-right: 12px;
+  vertical-align: middle;
+}
 
 .navegacao ul {
   display: flex;
