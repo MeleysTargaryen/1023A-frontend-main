@@ -11,7 +11,10 @@
 }
 
 
-header, nav, ul, li {
+header,
+nav,
+ul,
+li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -36,6 +39,15 @@ header, nav, ul, li {
   color: var(--cor-verde-escuro);
   letter-spacing: 2px;
 }
+
+.logotipo a {
+  text-decoration: none;
+  color: var(--cor-verde-escuro);
+  font-weight: bold;
+  font-family: var(--fonte-titulo);
+  transition: color 0.3s;
+}
+
 
 
 .navegacao ul {

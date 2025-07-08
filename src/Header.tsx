@@ -4,7 +4,7 @@ import './Header.css';
 export default function Header() {
   return (
     <header className="cabecalho">
-      <div className="logotipo">Caladan EcoRefúgio</div>
+      <div className="logotipo"><img src="https://images.icon-icons.com/1921/PNG/96/c_122067.png" alt="logo"/><Link to="/">Caladan EcoRefúgio</Link></div>
       <nav className="navegacao">
         <ul className="links-navegacao">
           <li><Link to="/especies">Espécies</Link></li>
