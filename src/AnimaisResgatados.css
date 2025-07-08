@@ -1,0 +1,68 @@
+.pagina-animais {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  font-family: Georgia, serif;
+}
+
+.conteudo-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 24px;
+  color: #2e5339;
+  border-bottom: 2px solid #2e5339;
+  padding-bottom: 8px;
+}
+
+.grid-animais {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.card-animal {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-animal:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.card-animal img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-animal .info {
+  padding: 16px;
+}
+
+.card-animal h2 {
+  font-size: 20px;
+  color: #2e5339;
+  margin-bottom: 8px;
+}
+
+.card-animal .descricao {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.card-animal .status {
+  font-weight: bold;
+  color: #a8cbb7;
+}
