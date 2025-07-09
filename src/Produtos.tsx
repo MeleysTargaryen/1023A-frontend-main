@@ -62,7 +62,7 @@ export default function Produtos() {
                     <div className="info">
                       <h2>{produto.nome}</h2>
                       <p className="descricao">Categoria: {produto.categoria}</p>
-                      <p className="preco">Preço: R$ {produto.preco.toFixed(2)}</p>
+                      <p className="preco">Preço: R$ {produto.preco}</p>
                     </div>
                   </div>
                 ))}
@@ -93,8 +93,8 @@ function gerarImagemProduto(categoria: string) {
     return 'https://img.ltwebstatic.com/v4/j/spmp/2025/05/26/63/17482635931cd4cc13006c12e5497012cabbb6b0f1_wk_1748347590_thumbnail_560x.webp';
   }
   if (categoriaLower.includes('brinquedo')) {
-    return 'https://img.freepik.com/fotos-premium/orca-baleia-pelucia-brinquedo_447400-3212.jpg';
+    return 'https://a-static.mlcdn.com.br/800x560/kawaii-35cm-tartaruga-brinquedo-de-pelucia-macio-tartaruga-do-mar-travesseiro-almofada-criancas-miaoowa/aliexpress/202876004/211dc1ffc013c27ec50b45255f532bfb.jpeg';
   }
 
-  return 'https://via.placeholder.com/300x200?text=Produto';
+  return 'https://img.freepik.com/vetores-gratis/logotipo-de-vibracoes-do-oceano-desenhado-a-mao_742173-4095.jpg?w=360';
 }
