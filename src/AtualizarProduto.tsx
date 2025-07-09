@@ -24,16 +24,7 @@ export default function AtualizarProduto() {
     setMensagem('Enviando atualização...');
 
     try {
-      const resposta = await fetch(`http://localhost:8000/produtos/${id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          nome: nome || undefined,
-          preco: preco ? parseFloat(preco) : undefined,
-          categoria: categoria || undefined
-        })
-      });
-
+       const resposta = await fetch('http://localhost:8000/produtos');
       if (!resposta.ok) {
         const erro = await resposta.json();
         throw new Error(erro.mensagem || 'Erro ao atualizar produto');

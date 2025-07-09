@@ -1,6 +1,7 @@
 import Header from "./Header";
 import Form from "./Form.tsx";
 import AtualizarProduto from "./AtualizarProduto.tsx";
+import ExcluirProduto from "./ExcluirProduto.tsx";
 
 
 function Adm() {
@@ -13,6 +14,7 @@ function Adm() {
           <div className="forms-lado-a-lado">
             <Form />
             <AtualizarProduto />
+            <ExcluirProduto />
           </div>
         </main>
       </div>
