@@ -13,11 +13,16 @@ export default function ExcluirProduto() {
       return;
     }
 
+    console.log('ID digitado:', id);
+
     setMensagem('Enviando solicitação de exclusão...');
 
     try {
-    const resposta = await fetch('http://localhost:8000/produtos')
-       
+      const resposta = await fetch(`http://localhost:8000/produtos/${id}`, {
+        method: 'DELETE'
+      });
+
+
       if (!resposta.ok) {
         const erro = await resposta.json();
         throw new Error(erro.mensagem || 'Erro ao excluir o produto');
