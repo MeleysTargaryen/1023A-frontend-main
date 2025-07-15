@@ -1,3 +1,24 @@
+ 🌊☆⋆｡🪼Tema do Projeto𖦹°‧★🐚
+-
+O Caladan Ecorefúgio é um sistema de gerenciamento de vendas de produtos confeccionados à mão para angariar fundos para um projeto de resgate e tratamento de animais marinhos em situação de vulnerabilidade.
+
+🪼 Funcionalidades Implementadas
+-
+1. Foi utilizado React no frontend, e a navegação entre as páginas é feita com a biblioteca react-router-dom.
+   
+🐚 Como Executar o Frontend Localmente
+-
+comandos do terminal 
+-
+```
+npm i
+ npm run dev
+```
+🐚 Lembrete
+- 
+Lembreçe de clonar o repositório do backend para que as funcionalidades funcione corretamente e também é importante conter o banco de dados presente no ReadMe do Backend
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
