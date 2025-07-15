@@ -7,7 +7,7 @@ export default function Form() {
   const [categoria, setCategoria] = useState('');
   const [mensagem, setMensagem] = useState('');
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function cadastrar(e: React.FormEvent) {
     e.preventDefault();
     setMensagem('Enviando...');
 
@@ -39,7 +39,7 @@ export default function Form() {
   return (
     <div className="form-container">
       <h2>Cadastrar Novo Produto</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={cadastrar}>
         <label>
           Nome:
           <input type="text" value={nome} onChange={e => setNome(e.target.value)} required />
